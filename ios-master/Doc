@@ -1,0 +1,232 @@
+# iOSSDKDoc
+## overview
+### Class
+JstPlayerSDK
+MediaLoader
+### Interface
+
+## detail
+### JstPlayerSDK
+public class JstPlayerSDK
+extends UIView
+
+#### constructor
+
+JstPlayerSDK()
+
+#### method
+|name|params|return|
+|--|--|--|
+|backwardTo|(time:Double)||
+|disposePlayer|||
+|forwardTo|(time:Double)||
+|getCurrentTime||Double|
+|getDuration||Double|
+|getHeight||CGFloat|
+|getLoadedTimeRanges||[playerTimeRange]|
+|getPlaybackRate||Float?|
+|getProgramDateTime||Int64|
+|getSeekableTimeRanges||[playerTimeRange]|
+|getViewHeight||CGFloat|
+|getViewWidth||CGFloat|
+|getWidth||CGFloat|
+|initPlayer|(url:String,startPosition:Double,autoPlay:Bool,mediaMode:String,title:String)||
+|initSubAudio|||
+|initSubtitle|||
+|isSeeking||Bool|
+|loadItem|(url:URL,preferredForwardBufferDuration:Double = 60 ,completion:@escaping (MediaLoader.Result) -> Void)||
+|loadItem|(url:URL,preferredForwardBufferDuration:Double = 60,success:@escaping (AVPlayer) -> Void,faild:@escaping () -> Void,timeout:@escaping () -> Void)||
+|pause|||
+|play|||
+|playbackObserve|||
+|postLoadObserve|(playerItem: AVPlayerItem)||
+|seek|(time:Double)||
+|seek|(time:Double,completion:((Bool)->Void)?)||
+|seek|(time:Double,toleranceBefore:CMTime,toleranceAfter:CMTime,completion:((Bool)->Void)?)||
+|seekAndPause|(time:Double)||
+|seekAndPlay|(time:Double)||
+|setObserver|(name:NSNotification.Name,completion:@escaping (Notification) -> Void)||
+|setSubAudio|(identifier:String)||
+|setSubtitle|(identifier:String)||
+|setVideoFillMode|(mode: String)||
+|setVisiblity|(visibility:Bool)||
+|startPlayerItemObserve|||
+|stopPlayer||
+
+|initSubtitle|
+|--|
+|initSubtitle()|
+|動画ソースに字幕trackがあれば取得し配列`subtitleLocale`にLocaleを格納|
+
+|initSubAudio|
+|--|
+|initSubAudio|
+|動画ソースに音声trackがあれば取得し配列`subaudioLocale`にLocaleを格納|
+
+|setObserver|
+|--|
+|setObserver	(name:NSNotification.Name,completion:@escaping (Notification) -> Void)	|
+|SDKで用意しているNotification.NameでObserverを設定する|
+
+|startPlayerItemObserve|
+|--|
+|startPlayerItemObserve()|
+|再生完了のイベントを通知するよう設定する|
+
+|postLoadObserve|
+|--|
+|postLoadObserve(playerItem: AVPlayerItem)|
+|buffer関連のstallイベントを通知するよう設定する|
+	
+|playbackObserve|
+|--|
+|playbackObserve()|
+|再生速度、再生エラー、画角の切り替わりを通知するよう設定する|
+		
+|play|
+|--|
+|play()|
+|再生を開始する|
+		
+|pause|
+|--|
+|pause()|
+|再生を一時停止する（再生再開ができる状態）|
+
+|seek|
+|--|
+|seek(time:Double)|
+|再生位置をtimeに設定する|
+
+|seek|
+|--|
+|seek(time:Double,completion:((Bool)->Void)?)|
+|再生位置をtimeに設定する。<br>再生位置移動完了後にcompletionを実行する|
+
+
+|seek|
+|--|
+|seek(time:Double,toleranceBefore:CMTime,toleranceAfter:CMTime,completion:((Bool)->Void)?)|
+|toleranceBefore,toleranceAfterでシーク精度を設定する<br>再生位置をtimeに設定する。<br>再生位置移動完了後にcompletionを実行する|
+
+|seekAndPause|
+|--|
+|seekAndPause(time:Double)|
+|再生位置をtimeに設定する<br>シーク後に一時停止する|
+
+|seekAndPlay|
+|--|
+|seekAndPlay(time:Double)|
+|再生位置をtimeに設定する<br>シーク後に再生再開する|
+
+|forwardTo|
+|--|
+|forwardTo(time:Double)|
+|現在の再生位置にtimeを足した再生位置に移動する|
+
+|backwardTo|
+|--|
+|backwardTo(time:Double)|
+|現在の再生位置からtimeを引いた再生位置に移動する|
+
+|initPlayer|
+|--|
+|initPlayer(url:String,startPosition:Double,autoPlay:Bool,mediaMode:String,title:String)|
+|ロードから再生までを行う|
+
+|setVisiblity|
+|--|
+|setVisiblity(visibility:Bool)|
+|プレイヤーの表示をvisibilityに設定する|
+	
+|setSubtitle|
+|--|
+|setSubtitle(identifier:String)|
+|プレイヤーに表示する字幕をidentifierで検索し設定する<br>なければ設定しない|
+
+|setSubAudio|
+|--|
+|setSubAudio(identifier:String)|
+|プレイヤーで再生する音声ををidentifierで検索し設定する<br>なければ設定しない|
+
+|setVideoFillMode|
+|--|
+|setVideoFillMode(mode: String)|
+|プレイヤーの表示方法を設定する|
+
+|loadItem|
+|--|
+|loadItem(url:URL,preferredForwardBufferDuration:Double = 60 ,completion:@escaping (MediaLoader.Result) -> Void)|
+|動画ソース`url`を読み込む<br>先読みbufferを`preferredForwardBufferDuration`に設定する<br>読み込み完了後`completion`を実行する|
+
+|loadItem|
+|--|
+|loadItem(url:URL,preferredForwardBufferDuration:Double = 60,success:@escaping (AVPlayer) -> Void,faild:@escaping () -> Void,timeout:@escaping () -> Void)|
+|動画ソース`url`を読み込む<br>先読みbufferを`preferredForwardBufferDuration`に設定する<br>読み込み完了後<br>成功：`success`を実行する<br>失敗：`faild`を実行する<br>タイムアウト：`timeout`を実行する|
+
+|stopPlayer|
+|--|
+|stopPlayer()|
+|再生を停止し動画をアンロードする|
+
+|disposePlayer|
+|--|
+|disposePlayer()|
+|プレイヤーのobserverを破棄し、プレイヤーobjectを破棄する|
+
+|getCurrentTime|
+|--|
+|getCurrentTime() -> Double|
+|現在の再生位置を返却する|
+
+|getDuration|
+|--|
+|getDuration() -> Double|
+|動画尺を返却する<br>ライブの場合は0を返却する|
+
+|getLoadedTimeRanges|
+|--|
+|getLoadedTimeRanges() -> [playerTimeRange]|
+|bufferingした動画尺情報の配列`[playerTimeRange]`を返却する|
+
+|getSeekableTimeRanges|
+|--|
+|getSeekableTimeRanges() -> [playerTimeRange]|
+|seek可能な動画尺情報の配列`[playerTimeRange]`を返却する|
+		
+|getPlaybackRate|
+|--|
+|getPlaybackRate() -> Float?|
+|再生速度を返却する<br>1が等倍速度|
+
+|getWidth|
+|--|
+|getWidth() -> CGFloat|
+|動画の画角の幅を返却する|
+
+|getHeight|
+|--|
+|getHeight() -> CGFloat|
+|動画の画角の高さを返却する|
+
+|getViewHeight|
+|--|
+|getViewHeight() -> CGFloat|
+|プレイヤーViewの幅を返却する|
+
+|getViewWidth|
+|--|
+|getViewWidth() -> CGFloat|
+|プレイヤーViewの高さを返却する|
+
+|isSeeking|
+|--|
+|isSeeking() -> Bool|
+|シーク中であるかどうかを返却する|
+
+|getProgramDateTime|
+|--|
+|getProgramDateTime() -> Int64|
+|動画ソースの起点日時（秒）を返却する|
+
+### MediaLoader

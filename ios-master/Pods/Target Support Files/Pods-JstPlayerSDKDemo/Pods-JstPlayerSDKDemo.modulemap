@@ -1,0 +1,6 @@
+framework module Pods_JstPlayerSDKDemo {
+  umbrella header "Pods-JstPlayerSDKDemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-JstPlayerSDKDemo/Pods-JstPlayerSDKDemo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CsideReport/CsideReport.framework
+${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework
+${BUILT_PRODUCTS_DIR}/jstPlayerSDK/jstPlayerSDK.framework

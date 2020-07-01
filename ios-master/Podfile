@@ -1,0 +1,8 @@
+use_frameworks!
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+target 'JstPlayerSDKDemo' do
+  pod 'jstPlayerSDK', :path => './JSTPlayerSDK'
+  pod 'CsideReport', :path => './CsideReport'
+  pod 'GoogleAds-IMA-iOS-SDK'
+end

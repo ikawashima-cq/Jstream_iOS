@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "GLOBAL">
+         <PersistentStrings>
+            <PersistentString
+               value = "audioTracks.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MediaLoader.init(_:timeoutInterval:preferredForwardBufferDuration:):medialoader.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "asset.tracks(withMediaType: AVMediaType.metadata)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "JstPlayerSDK.play():jstreamPlayerSDKManager.swift">
+      </ContextState>
+      <ContextState
+         contextName = "AudioViewCotroller.audioEngineTest():AudioViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "asset.tracks(withMediaType:AVMediaType.audio)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "JstPlayerSDK.videogroup():jstreamPlayerSDKManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "asset.metadata">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "JstPlayerSDK.initSubtitle():jstreamPlayerSDKManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "option.displayName">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "JstPlayerSDK.initSubAudio():jstreamPlayerSDKManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "obj.value(forKey:&quot;MediaSelectionOptionsName&quot;) as! String">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SSAIViewController.onCompleteStartSession(manifest:):SSAIViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "videoView.player">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ManifestParser.parse(data:):ManifestParser.swift">
+      </ContextState>
+      <ContextState
+         contextName = "-[CSRPLegacyTrackingTimer executeTask]:CSRPLegacyTrackingTimer.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "!self.playerLike.isPlaying">
+            </PersistentString>
+            <PersistentString
+               value = "self.playerLike">
+            </PersistentString>
+            <PersistentString
+               value = "_logarea.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TopViewController.parse(json:):TopViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

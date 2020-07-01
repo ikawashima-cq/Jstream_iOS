@@ -1,0 +1,6 @@
+framework module CsideReport {
+  umbrella header "CsideReport-umbrella.h"
+
+  export *
+  module * { export * }
+}

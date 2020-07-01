@@ -1,0 +1,28 @@
+PODS:
+  - CsideReport (1.1.0)
+  - GoogleAds-IMA-iOS-SDK (3.11.3)
+  - jstPlayerSDK (0.0.1)
+
+DEPENDENCIES:
+  - CsideReport (from `./CsideReport`)
+  - GoogleAds-IMA-iOS-SDK
+  - jstPlayerSDK (from `./JSTPlayerSDK`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - GoogleAds-IMA-iOS-SDK
+
+EXTERNAL SOURCES:
+  CsideReport:
+    :path: "./CsideReport"
+  jstPlayerSDK:
+    :path: "./JSTPlayerSDK"
+
+SPEC CHECKSUMS:
+  CsideReport: 92e68d9f2fd2acbc0b3ab18986dcf7659b3c0c06
+  GoogleAds-IMA-iOS-SDK: 134b35758455576aaa6b3d2d3146699dcf8af4f1
+  jstPlayerSDK: cf6de479aa24f92ea41055af54ebb2abfbec0bb9
+
+PODFILE CHECKSUM: 9b662d210d8d56836bf15d538c354e7f2cd761c8
+
+COCOAPODS: 1.8.4
